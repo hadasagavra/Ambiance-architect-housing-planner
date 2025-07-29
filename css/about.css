@@ -1,0 +1,41 @@
+.t{
+    display: block;
+    text-align: center;
+    font: 200 1.666rem Agency FB;
+    color: #a19796;
+    margin: 0 auto;
+    width:60%;
+}
+
+.icon_img{
+   width:8.125rem;
+   height:auto;
+
+    display: block;
+    margin: 0 auto;
+}
+.h2_img {
+    text-align: center;
+    font: 200 3.333rem Agency FB;
+    color: #a19796;
+    margin: 0 auto;
+}
+.div_txt {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+ #qu{
+    text-align: center;
+    font: 200 4.1665rem Agency FB ;
+    font-weight: bolder;
+    color: #a19796;
+  
+ 
+}
+
+
+  
+  
+  

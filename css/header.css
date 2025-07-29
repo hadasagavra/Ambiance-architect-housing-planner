@@ -1,0 +1,252 @@
+body {
+  margin: 0; /* הסרת מרווחים ברירת מחדל */
+  overflow-x: hidden; /* מניעת גלילה אופקית */
+  background-color: #e9e7e7;
+}
+
+#logoheader {
+  width:25%;
+  height: 60%;
+  position: relative;
+  left: 40%;
+  top: 25%;
+}
+header img {
+
+      position:relative;
+      left:40%;
+      top:10%;
+      width: 40%;
+      height: 45%;
+      z-index: 3;
+  
+}
+#menu {
+  position: fixed; /* תפריט מקובע */
+  top: 0; /* התפריט מתחיל מהחלק העליון */
+  width: 100vw; /* רוחב התפריט */
+  height: 12vh; /* גובה התפריט */
+  background: transparent; /* רקע שקוף */
+  padding: 0.625rem, 1.25rem, 0.4375rem; /* ריווח פנימי */
+  display: flex; /* סידור כל האלמנטים בשורה */
+  justify-content: space-around; /* ריווח שווה בין הקישורים */
+  align-items: center; 
+  z-index: 10;
+  list-style-type: none;
+}
+
+
+
+#menu a {
+color: black; /* צבע טקסט */
+  text-decoration: none; /* ללא קו תחתון */
+  padding: 0.4375rem 0; /* ריווח פנימי */
+  font: 200 1.833rem Agency FB;
+  font-weight: 900;
+}
+
+#menu a:hover {
+  color: #d3b19a; /* שינוי צבע במעבר עכבר */
+}
+
+footer {
+position: relative;
+bottom: 0px;
+top: 7.5rem; /* מרווח מהאלמנטים הקודמים */
+width: 100%;
+padding: 1.25rem 0;
+background-color: #232323;
+}
+
+#designfooter {
+display: flex;
+flex-direction: row-reverse; /* הכיוון ההפוך */
+justify-content: space-around;
+align-items: center;
+flex-wrap: wrap; /* מאפשר את העטיפה של האלמנטים לשורות נוספות במסכים קטנים */
+}
+
+
+footer ul {
+padding: 0;
+}
+
+footer li {
+list-style-type: none;
+}
+
+footer li, a {
+color: #ffffff;
+font: 200 1.5625rem 'Agency FB';
+text-align: center;
+  text-decoration: none;
+
+padding: 0.3125rem;
+margin: 0.1875rem;
+}
+
+footer li:hover, a:hover {
+color: #d3b19a;
+font: 200 1.625rem 'Agency FB';
+}
+
+footer img {
+height: auto;
+width: 100%;
+max-width: 9.375rem;
+}
+
+footer p {
+font: 600 1.333rem 'Agency FB';
+color: #cfcdcd;
+margin-bottom: 0.625rem;
+}
+
+
+
+section {
+  position: relative;
+  top: 12vh;
+}
+
+#menu.scrolled a:hover {
+  color: #e9e7e7; /* אפור בהיר בעת גלילה */
+}
+#menu .submenu {
+  display: none;
+  position: absolute;
+  background-color: rgba(211, 177, 154, 0.8);
+  padding: 0.3125rem;
+  list-style: none;
+}
+
+
+#menu .submenu li {
+  margin: 0.3125rem 0.875rem;
+}
+
+#menu .submenu a {
+  color: black;
+  padding: 0.3125rem;
+  font-size: 1.25rem;
+}
+
+#menu .submenu a:hover {
+  color: #e9e7e7;
+}
+
+#menu li:hover .submenu {
+  display: block;
+}
+/* חלון הקופץ */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0); /* אפקט התחלה: קטן ומוסתר */
+  width: 40%;
+  height: 40vh;
+  background: #f6f6f6;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-align: center;
+  background-image: -webkit-linear-gradient(top left, #d3b19a 80%, #a47c48 20%);
+  animation: popupBounce 0.6s ease forwards; /* אפקט הקפיצה */
+}
+.popup-content {
+  padding: 15px;
+}
+.popup h2{ font-family:  'Agency FB'; color: #a19796;}
+.popup p {
+  font: 200 1.833rem 'Agency FB';
+  color: #a19796;
+}
+
+.popup-button {
+  background-color: #a19796;
+  color: #f1f1f1;
+  border: none;
+  border-radius: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  font-size: 1.25rem;
+  margin: 0.625rem;
+  transition: all 0.3s ease;
+  font-family:'Agency FB';
+}
+
+.popup-button:hover {
+  background-color: #a47c48;
+}
+/* אנימציית הקפיצה */
+@keyframes popupBounce {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+/* Hamburger styling */
+.hamburger {
+display: none;
+font-size: 1.875rem;
+cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  #logoheader {
+    width: 35%;
+    height: 25vh;
+    position: relative;
+    top: 40%;
+    left: 35%;
+  }
+  #designfooter {
+    grid-template-columns: repeat(2, 1fr); /* 2 עמודות במסכים קטנים */
+}
+  body{    overflow-x: hidden; /* מניעת גלילה אופקית */
+  }
+footer li,
+a {
+ font-size: 1.025rem;
+}
+
+footer li:hover,
+a:hover {
+font-size: 1.125rem;
+}
+#menu {
+display: none;
+flex-direction: column-reverse; /* Vertical alignment */
+position: absolute;
+top: 1.875rem;
+height: 50vh;
+width:auto;
+background-color: rgba(211, 177, 154, 0.8);
+border: #a19796 solid;
+}
+
+/* Show the hamburger icon */
+.hamburger {
+display: block;
+}
+
+/* Show menu when active */
+#menu.active {
+display: flex;
+}
+#menu a { font-size: 1.5rem;}
+#menu a:hover {
+color: #e9e7e7; /* שינוי צבע במעבר עכבר */
+}
+
+
+header img { display: none;}
+
+}
